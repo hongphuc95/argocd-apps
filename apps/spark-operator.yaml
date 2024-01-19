@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spark-operator
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: spark-operator
+  project: homelab
+  source:
+    chart: spark-operator
+    repoURL: https://googlecloudplatform.github.io/spark-on-k8s-operator
+    targetRevision: 1.1.27
+    helm:
+      parameters:
+      - name: "webhook.enable"
+        value: "true"
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
