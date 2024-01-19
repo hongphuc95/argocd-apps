@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: root-app
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  project: homelab
+  source:
+    path: apps/
+    repoURL: https://github.com/hongphuc95/argocd-apps.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
