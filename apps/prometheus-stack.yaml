@@ -25,7 +25,7 @@ spec:
             - grafana.hongphucvu.com
           grafana.ini:
             server:
-              root_url: http://grafana.hongphucvu.com
+              root_url: https://grafana.hongphucvu.com
             auth.azuread:
               name: Azure AD
               enabled: true
