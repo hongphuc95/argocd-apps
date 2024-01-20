@@ -19,7 +19,7 @@ spec:
         grafana:
           ingress:
             enabled: true
-            ingressClassName: traefik-lb
+            ingressClassName: nginx
             path: /
             hosts:
             - grafana.hongphucvu.com
