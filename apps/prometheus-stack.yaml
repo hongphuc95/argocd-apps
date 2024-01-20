@@ -22,7 +22,7 @@ spec:
             ingressClassName: nginx
             path: /
             hosts:
-            - grafana.hongphucvu.com
+            - http://grafana.hongphucvu.com/
           grafana.ini:
             server:
               root_url: grafana.hongphucvu.com
