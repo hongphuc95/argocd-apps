@@ -34,8 +34,8 @@ spec:
               client_id: $__file{/etc/secrets/grafana-secret/client_id}
               client_secret: $__file{/etc/secrets/grafana-secret/client_secret}
               scopes: openid email profile
-              auth_url: https://login.microsoftonline.com/TENANT_ID/oauth2/v2.0/authorize
-              token_url: https://login.microsoftonline.com/TENANT_ID/oauth2/v2.0/token
+              auth_url: https://login.microsoftonline.com/2a113a85-e93a-402e-af34-4ab699ed1f7c/oauth2/v2.0/authorize
+              token_url: https://login.microsoftonline.com/2a113a85-e93a-402e-af34-4ab699ed1f7c/oauth2/v2.0/token
               allowed_organizations: 2a113a85-e93a-402e-af34-4ab699ed1f7c
               role_attribute_strict: false
               allow_assign_grafana_admin: true
