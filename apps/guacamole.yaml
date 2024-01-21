@@ -11,7 +11,7 @@ spec:
     namespace: guacamole
   project: homelab
   source:
-    path: /manifest
+    path: manifest/
     repoURL: https://github.com/hongphuc95/guacamole-kubernetes.git
     targetRevision: HEAD
   syncPolicy:
